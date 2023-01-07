@@ -21,16 +21,14 @@ public class Lab02 {
 		System.out.print("Enter another positive integer: ");
 		int in2 = inkey.nextInt();
 		
-		if (in2<in1) {
-			int x = in2;
-			in2 = in1;
-			in1 = x;
-		}
+		int max = Math.max(in1, in2);
+		int min = Math.min(in1, in2);
 		
 		for(int i=0; i<100; i++) {
-			System.out.println((int) (Math.random()*((in2+1)-in1))+in1);
+			int num = (int) (Math.random()*((max-min+1))+ min);
+			System.out.print(num+" ");
 		}
-	}
+	}	
 
 
 	public static void problem2() {
